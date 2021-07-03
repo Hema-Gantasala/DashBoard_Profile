@@ -1,0 +1,19 @@
+mat-card{
+    margin:30px;
+}
+div
+{
+    text-align: center;
+}
+button
+{
+    position: relative;
+    right:450px;
+    font-weight: bolder;
+    text-transform: 5px;
+}
+img{
+    display: inline-block;
+    height: 300px;
+    border-radius: 50%;
+}

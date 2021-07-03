@@ -1,0 +1,69 @@
+<div>
+
+    <mat-toolbar color="primary">
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span ><small>
+            <mat-icon style="position: relative; top:6px;">person_pin</mat-icon>
+        </small> CuteHR</span>
+        <span class="example-spacer"></span>
+        <span class="user" style="position: relative; bottom: 8px;">
+            <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="usuario" /></span>
+        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with help_outline icon" style="position: relative; right:5px;">
+            <mat-icon style="font-size: 30px; margin:0px -15px 0px ;">help_outline</mat-icon>
+        </button>
+        <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+            <mat-icon>share</mat-icon>
+        </button> -->
+        <button
+          style="color:black;background-color: rgb(32, 216, 32);border-radius:5px;padding:3px; margin-bottom: 4px;display:inline-block; width: 100px; height:35px">
+          {{date | date: "HH:mm:ss"}}</button>
+    </mat-toolbar>
+</div>
+<div>
+    <mat-drawer-container class="example-container">
+        <mat-drawer mode="side" opened>
+            <div>
+                <div class="user">
+                    <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="usuario" />
+                <div class="user-info">
+                  <h6> <b> Ethan Antonio</b></h6>Centrovo
+                </div>
+                </div>
+                <ul class="nav-elements">
+                    <li>Your Company</li>
+                    <li (click)="navigate('Employee')" routerLink="/home/users" routerLinkActive="linkActive">
+                        <a >
+                            <small>
+                                <mat-icon>person</mat-icon>
+                            </small>
+                            <span>Employee</span>
+                        </a>
+                    </li>
+                    <li routerLink="/home/settings" routerLinkActive="linkActive">
+                        <a>
+                            <small>
+                                <mat-icon>settings</mat-icon>
+                            </small>
+                            <span>
+                                Settings
+                            </span>
+                        </a>
+
+                    </li>
+                    <li routerLink="/home/projects" routerLinkActive="linkActive">
+                        <a>
+                            <small>
+                                <mat-icon>view_module</mat-icon>
+                            </small><span>Projects</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </mat-drawer>
+        <mat-drawer-content>
+            <router-outlet></router-outlet>
+        </mat-drawer-content>
+    </mat-drawer-container>
+</div>

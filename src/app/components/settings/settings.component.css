@@ -1,0 +1,25 @@
+mat-card{
+    margin:30px;
+}
+div
+{
+    text-align: center;
+}
+button
+{
+    position: relative;
+    right:450px;
+    font-weight: bolder;
+    text-transform: 5px;
+}
+.a{
+    display:flexbox; 
+    /* height: max-content; */
+    width: 300px; 
+    position:relative; 
+    left:400px;
+    cursor:pointer;
+}
+h5:hover{
+    transform: scale(1.1);
+}
